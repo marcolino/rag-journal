@@ -1,0 +1,35 @@
+database:
+  mongodb_uri: "mongodb://localhost:27017/"
+  database_name: "rag_journal"
+  collection_name: "articles"
+
+models:
+  mode: "api" # "api" / "local"
+
+  api: # api mode
+    provider: "openai" # "openai" /" "anthropic"
+    model: "gpt-4o"  # "gpt-4o" / "claude-3-5-sonnet-20241022"
+    api_key_env: "OPENAI_API_KEY" # "OPENAI_API_KEY" / "ANTHROPIC_API_KEY"
+    max_tokens: 2000
+    temperature: 0.1
+  
+  local: # local mode (requires GPU)
+    llm_model: "Qwen/Qwen2.5-7B-Instruct"
+    device: "cuda"
+    max_tokens: 2000
+    temperature: 0.1
+
+  embedding: # embeddings (always locale, light)
+    #model_name: "intfloat/multilingual-e5-large" # BEST, but big (2.24GB)
+    model_name: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    batch_size: 64
+    dimension: 1024
+  
+retrieval:
+  max_results: 10
+  semantic_search_top_k: 20
+
+chat: # chat configuration
+  max_history_turns: 10 # number of conversation turns to keep
+  auto_compress: true # automatically compress when history grows
+  compression_strategy: "summary" # "summary" or "truncate"

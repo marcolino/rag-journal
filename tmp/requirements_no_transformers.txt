@@ -1,0 +1,18 @@
+# Core dependencies
+pymongo>=4.6.1,<5.0.0
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+
+# ML/NLP dependencies
+torch>=2.1.0,<2.3.0  # Allows compatible versions
+numpy>=1.24.0
+scipy>=1.11.0
+
+# Utilities
+tqdm>=4.66.0
+click>=8.1.0
+colorama>=0.4.0
+
+# Optional: for better performance
+accelerate>=0.25.0
+optimum>=1.16.0

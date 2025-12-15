@@ -1,0 +1,9 @@
+{
+  "python.REPL.enableREPLSmartSend": false,
+  "files.exclude": {
+    "node_modules": true,
+    ".git": true,
+    "**/__init__.py": true,
+    "**/__pycache__": true
+  }
+}

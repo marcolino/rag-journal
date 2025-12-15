@@ -1,0 +1,24 @@
+# Core dependencies
+pymongo>=4.6.1,<5.0.0
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+
+# Agentic RAG dependencies
+openai>=1.0.0
+anthropic>=0.18.0
+
+# ML/NLP dependencies
+torch>=2.1.0,<2.3.0
+transformers>=4.44.2,<5.0.0  # Changed from 4.36.0-4.39.0 to 4.44.2-5.0.0
+sentence-transformers>=2.2.0
+numpy>=1.24.0
+scipy>=1.11.0
+
+# Utilities
+tqdm>=4.66.0
+click>=8.1.0
+logging>=0.4.9.6
+
+# Optional
+accelerate>=0.25.0
+optimum>=1.16.0
